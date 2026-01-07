@@ -2,6 +2,24 @@
 
 A Streamlit in Snowflake application that provides comprehensive analytics on Cortex Agent usage across your Snowflake account. Track **what** agents are being used, **who** is using them, **when** they're being used, and **how often**.
 
+## Screenshots
+
+### What - Agent Usage Overview
+![What Tab](docs/screenshot_what_tab.png)
+*View all registered agents and their operation breakdown by action type*
+
+### Who - User Activity
+![Who Tab](docs/screenshot_who_tab.png)
+*See which users are interacting with agents and their activity patterns*
+
+### When - Temporal Analysis
+![When Tab](docs/screenshot_when_tab.png)
+*Analyze usage trends over time with daily timeline and hourly distribution*
+
+### Frequency - Usage Patterns
+![Frequency Tab](docs/screenshot_frequency_tab.png)
+*Understand weekly patterns and execution statistics*
+
 ## Features
 
 - **What**: View all registered agents and their operation types (Create, Modify, Execute, etc.)

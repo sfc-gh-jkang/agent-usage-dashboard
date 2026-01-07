@@ -2,13 +2,15 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 from datetime import datetime, timedelta
+import os
 
 try:
     from snowflake.snowpark.context import get_active_session
     session = get_active_session()
 except:
     from snowflake.snowpark import Session
-    session = Session.builder.config('connection_name', 'default').create()
+    conn_name = os.getenv('SNOWFLAKE_CONNECTION_NAME', 'default')
+    session = Session.builder.config('connection_name', conn_name).create()
 
 st.title("Cortex Agent Usage Analytics")
 

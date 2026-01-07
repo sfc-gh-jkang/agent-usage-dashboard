@@ -2,7 +2,8 @@ version = 1
 revision = 3
 requires-python = ">=3.11"
 resolution-markers = [
-    "python_full_version >= '3.12'",
+    "python_full_version >= '3.13'",
+    "python_full_version == '3.12.*'",
     "python_full_version < '3.12'",
 ]
 
@@ -13,20 +14,17 @@ source = { virtual = "." }
 dependencies = [
     { name = "altair" },
     { name = "pandas" },
-    { name = "snowflake-snowpark-python" },
+    { name = "snowflake-snowpark-python", extra = ["pandas"] },
     { name = "streamlit" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "altair", specifier = ">=5.0.0" },
-    { name = "pandas", specifier = ">=2.0.0" },
-    { name = "snowflake-snowpark-python", specifier = ">=1.20.0" },
-    { name = "streamlit", specifier = ">=1.31.0" },
+    { name = "altair", specifier = ">=5.5.0" },
+    { name = "pandas", specifier = ">=2.3.0" },
+    { name = "snowflake-snowpark-python", extras = ["pandas"], specifier = ">=1.37.0" },
+    { name = "streamlit", specifier = ">=1.51.0" },
 ]
-
-[package.metadata.requires-dev]
-dev = []
 
 [[package]]
 name = "altair"
@@ -1166,6 +1164,12 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/06/05/64d3de8c98f783a3065e60107519b701d1ab7ef15efefa279d338f3fba64/snowflake_connector_python-4.2.0-cp313-cp313-win_amd64.whl", hash = "sha256:3665eae47a6ccaf00ca567936cb16d5cbdd5b9f8ab3ee3a3f072bf3c4b76986c", size = 12058956, upload-time = "2026-01-07T16:45:13.063Z" },
 ]
 
+[package.optional-dependencies]
+pandas = [
+    { name = "pandas" },
+    { name = "pyarrow" },
+]
+
 [[package]]
 name = "snowflake-snowpark-python"
 version = "1.44.0"
@@ -1184,6 +1188,11 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e8/5b/4b2316b77c6d64be629fc62c940826ef6af8c823256703cb44a4aa1868b0/snowflake_snowpark_python-1.44.0.tar.gz", hash = "sha256:27f3af551a2158b8cd2e1040fd2b9b5ffc135fc4567e32f18dce2c9379a6c50e", size = 1723549, upload-time = "2025-12-15T21:37:00.166Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/99/34/6fb36127af3307c5c403a19b11a40896bf4e7d81bc08e00be49237180946/snowflake_snowpark_python-1.44.0-py3-none-any.whl", hash = "sha256:da47c748ab797c8cbdc6ca768187dfdf31739d6e0c88220a0db8ccecd3afb080", size = 1815059, upload-time = "2025-12-15T21:36:58.512Z" },
+]
+
+[package.optional-dependencies]
+pandas = [
+    { name = "snowflake-connector-python", extra = ["pandas"] },
 ]
 
 [[package]]
