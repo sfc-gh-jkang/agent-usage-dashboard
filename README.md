@@ -257,3 +257,10 @@ MIT License - feel free to use and modify for your own Snowflake account analyti
 ---
 
 Built with Cortex Code for Snowflake
+
+## Repository Owner
+
+- **Owner:** John Kang (john.kang@snowflake.com / [@sfc-gh-jkang](https://github.com/sfc-gh-jkang))
+- **Access requests:** Open a [CASEC Jira](https://snowflakecomputing.atlassian.net/) for access changes
+- **License:** Apache-2.0
+
