@@ -2,3 +2,12 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Secrets & credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+.streamlit/secrets.toml
